@@ -1,0 +1,15 @@
+https://leetcode.com/problems/valid-anagram/description/
+time complexity : 0(nlog n) check
+
+class Solution:
+    def isAnagram(self, s: str, t: str) -> bool:
+        sdict,tdict={},{}
+        if len(s)!=len(t):
+            return False
+        for i in s:
+            sdict[i]=1+sdict.get(i,0)
+        for j in t:
+            tdict[j]=1+tdict.get(j,0)
+        if sdict==tdict:
+            return True
+        return False
