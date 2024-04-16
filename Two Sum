@@ -1,0 +1,14 @@
+https://leetcode.com/problems/two-sum/description/
+
+check time complexity
+
+class Solution:
+    def twoSum(self, nums: List[int], target: int) -> List[int]:
+        dictn={}
+        for i,n in enumerate(nums):
+            diff=target-n
+            if diff in dictn:
+                return dictn[diff],i
+            dictn[n]=i
+        return 
+        
